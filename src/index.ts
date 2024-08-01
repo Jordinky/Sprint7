@@ -1,11 +1,8 @@
-import express, { Request, Response } from 'express'
-import http from "http"
+import express from 'express'
 import connect from '../database/mongoconnect'
 import messageRoutes from '../routes/message.routes'
 import authRoutes from '../routes/auth.routes'
 import dotenv from "dotenv";
-import cors from 'cors'
-
 import userRoutes from "../routes/user.routes"
 var cookieParser = require('cookie-parser')
 import {app, server} from "../socket/socket"
@@ -13,6 +10,7 @@ import {app, server} from "../socket/socket"
 const PORT = process.env.PORT || 3000
 
 dotenv.config()
+
 
 app.use(express.json())
 app.use(cookieParser())
