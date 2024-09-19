@@ -21,7 +21,7 @@ Sprint7 es un proyecto que tiene como objetivo la creación de un chat en tiempo
 - socket/: Configuraciones y manejadores de socket.
 - src/: Archivos fuente.
 - utils/: Funciones y ayudantes utilitarios.
-- 
+
 ## Instalación
 
 Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
