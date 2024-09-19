@@ -41,6 +41,23 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
 
 ## Uso
 
-Para iniciar el proyecto, ejecuta:
+Para iniciar el entorno de javascript, ejecuta:
 ```sh
-npm start
+npm run build
+```
+Para arrancar el backend, ejecuta:
+```sh
+npm run build
+```
+El frontend se encuentra en el directorio:
+```sh
+cd frontend
+```
+Para instalar el frontend ejecuta:
+```sh
+npm install
+```
+Y para arrancarlo ejecuta:
+```sh
+npm run dev
+```
