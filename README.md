@@ -39,6 +39,11 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
     npm install
     ```
 
+4. Instala typescrypt:
+    ```sh
+    npm tsc
+    ```
+   
 ## Uso
 
 Para iniciar el entorno de javascript, ejecuta:
