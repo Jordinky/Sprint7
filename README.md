@@ -44,7 +44,8 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
 Para iniciar el entorno de javascript, ejecuta:
 ```sh
 npm run build
-
+```
 Para arrancar el backend, ejecuta:
 ```sh
 npm run build
+```
