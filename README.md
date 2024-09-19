@@ -49,3 +49,15 @@ Para arrancar el backend, ejecuta:
 ```sh
 npm run build
 ```
+El frontend se encuentra en el directorio:
+```sh
+cd frontend
+```
+Para instalar el frontend ejecuta:
+```sh
+npm install
+```
+Y para arrancarlo ejecuta:
+```sh
+npm run dev
+```
