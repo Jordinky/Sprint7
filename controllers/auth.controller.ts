@@ -14,6 +14,7 @@ export const register = async(req:any,res:any)=>{
             email,
             password
         })
+
         if(newUser){
             generateTokenAndSetCookie(newUser._id,res);
             console.log(newUser)
@@ -28,19 +29,30 @@ export const register = async(req:any,res:any)=>{
 
 export const login = async (req:any,res:any)=>{
     try{
-        const {userName,password} = req.body
+        const {userName, password} = req.body
         const user = await User.findOne({userName})
 
-        generateTokenAndSetCookie(user!._id, res);
+       const pwdIsCorrect = password === user?.password
+       
+        console.log("password", password)
+        console.log("passwordusuario",user?.password)
 
-        if(!user){
+        /*if(!user || password !== user?.password){
             res.status(401).json("Wrong email or password")
+        }*/
+        if(!user || pwdIsCorrect == false){
+            console.log("user doesn't exist")
+            return res.status(400).json({ error: "Wrong username or password" });
+        }else{
+            generateTokenAndSetCookie(user!._id, res);
+
+            res.status(202).json({
+                _id: user?._id,
+                email: user?.email,
+                userName: user?.userName,
+            });
         }
-        res.status(202).json({
-			_id: user?._id,
-			email: user?.email,
-			userName: user?.userName,
-		});
+
     }catch(error:any){
         res.status(500).json({"Error":error.message})
     }

@@ -8,7 +8,9 @@ const useLogin = () => {
 
 	const login = async (userName, password) => {
 		const success = handleInputErrors(userName, password);
+
 		if (!success) return;
+
 		setLoading(true);
 		try {
 			const res = await fetch("/api/auth/login", {
