@@ -9,6 +9,9 @@ import {app, server} from "../socket/socket"
 var cookieParser = require('cookie-parser')
 const PORT = process.env.PORT || 3000
 
+dotenv.config()
+console.log(process.env.MONGO_URL);
+
 app.use(express.json())
 app.use(cookieParser())
 
