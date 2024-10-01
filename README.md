@@ -52,7 +52,7 @@ npm run build
 ```
 Para arrancar el backend, ejecuta:
 ```sh
-npm run build
+npm run dev
 ```
 
 Si quieres utilizar tu propia base de datos de mongoDB compass tienes que crear un fichero .env en el directorio raíz del proyecto, para poder utilizarlo tienes que instalar la dependencia "dotenv":
