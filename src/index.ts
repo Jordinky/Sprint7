@@ -7,10 +7,10 @@ import authRoutes from '../routes/auth.routes'
 import userRoutes from "../routes/user.routes"
 import {app, server} from "../socket/socket"
 
+dotenv.config()
+
 var cookieParser = require('cookie-parser')
 const PORT = process.env.PORT || 3000
-
-dotenv.config()
 
 app.use(express.json())
 app.use(cookieParser())
