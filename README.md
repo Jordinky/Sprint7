@@ -55,18 +55,20 @@ Para arrancar el backend, ejecuta:
 npm run dev
 ```
 
-Si quieres utilizar tu propia base de datos de mongoDB compass tienes que crear un fichero .env en el directorio raíz del proyecto, para poder utilizarlo tienes que instalar la dependencia "dotenv":
+Si quieres utilizar tu propia base de datos de mongoDB compass tienes que crear un fichero .env en el directorio raíz del proyecto, para poder utilizarlo tienes que instalar la dependencia "dotenv", el fichero tiene que tener una estructura como esta:
 ```sh
-npm install dotenv
+MONGO_URL=...
+SECRET_KEY=...
 ```
-En el fichero .env tienes que crear una variable de entorno con el nombre de MONGO_URL y añadir la cadena de conexión que encontrarás en el apartado de "connect/drivers" en tu cluster de mongodb
+En la web de https://cloud.mongodb.com/v2/6687b2a13a0bfa78a1af710b#/clusters/connect?clusterId=Cluster0 encontrasás las instrucciones para obtener la cadena de conexión, que añadirás a la variable MONGO_URL
 
 ![imagen](https://github.com/user-attachments/assets/e2ff73bb-9953-468d-9fb4-25a523a8709b)
 
-En el mismo fichero crea una variable de entorno para la "Secret_key" que necesitarás para crear el token que valida las conexiones de los usuarios:
+Para obtener el SECRET_KEY tienes que utilizar el siguiente comando (en entorno Linux, en mi caso Mac)
 ```sh
-SECRET_KEY='YFBbFMS+YIkPzjUON1x0ZQ8fD9omGQfX1R741oyvrDE='
+openssl -rand base64 32
 ```
+
 El frontend se encuentra en el directorio:
 ```sh
 cd frontend
